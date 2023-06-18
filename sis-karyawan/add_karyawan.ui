@@ -84,9 +84,9 @@
     <property name="geometry">
      <rect>
       <x>39</x>
-      <y>110</y>
+      <y>70</y>
       <width>411</width>
-      <height>321</height>
+      <height>361</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -142,6 +142,23 @@
       </widget>
      </item>
      <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Alamat</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edit_alamat">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="label_6">
        <property name="text">
         <string>Gaji Karyawan</string>
@@ -185,7 +202,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>20</y>
+      <y>0</y>
       <width>261</width>
       <height>41</height>
      </rect>

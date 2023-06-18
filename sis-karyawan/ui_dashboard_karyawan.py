@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'dashboard_admin.ui'
+## Form generated from reading UI file 'dashboard_karyawan.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.0
 ##
@@ -11,34 +11,30 @@
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
-    QCursor, QFont, QFontDatabase, QGradient,
-    QIcon, QImage, QKeySequence, QLinearGradient,
-    QPainter, QPalette, QPixmap, QRadialGradient,
-    QTransform)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QHeaderView, QLabel, QMainWindow,
-    QMenu, QMenuBar, QPushButton, QSizePolicy,
-    QStatusBar, QTableWidget, QTableWidgetItem, QVBoxLayout,
-    QWidget)
+    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
+    QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(869, 452)
-        self.actionData_Admin = QAction(MainWindow)
-        self.actionData_Admin.setObjectName(u"actionData_Admin")
+        MainWindow.resize(800, 600)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(340, 20, 201, 41))
+        self.label.setGeometry(QRect(320, 0, 201, 41))
         font = QFont()
         font.setPointSize(20)
         self.label.setFont(font)
         self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
         self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
-        self.verticalLayoutWidget_2.setGeometry(QRect(640, 160, 181, 171))
+        self.verticalLayoutWidget_2.setGeometry(QRect(580, 140, 181, 171))
         self.verticalLayout_2 = QVBoxLayout(self.verticalLayoutWidget_2)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -67,13 +63,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayoutWidget = QWidget(self.centralwidget)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(40, 110, 541, 281))
+        self.verticalLayoutWidget.setGeometry(QRect(30, 170, 521, 71))
         self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.tableWidget = QTableWidget(self.verticalLayoutWidget)
-        if (self.tableWidget.columnCount() < 6):
-            self.tableWidget.setColumnCount(6)
+        if (self.tableWidget.columnCount() < 5):
+            self.tableWidget.setColumnCount(5)
         __qtablewidgetitem = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -84,30 +80,25 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         __qtablewidgetitem4 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        if (self.tableWidget.rowCount() < 1):
+            self.tableWidget.setRowCount(1)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
-        if (self.tableWidget.rowCount() < 10):
-            self.tableWidget.setRowCount(10)
+        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem5)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setLayoutDirection(Qt.LeftToRight)
-        self.tableWidget.setRowCount(10)
-        self.tableWidget.setColumnCount(6)
+        self.tableWidget.setRowCount(1)
+        self.tableWidget.setColumnCount(5)
 
         self.verticalLayout.addWidget(self.tableWidget)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 869, 21))
-        self.menuAction = QMenu(self.menubar)
-        self.menuAction.setObjectName(u"menuAction")
+        self.menubar.setGeometry(QRect(0, 0, 800, 21))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
-
-        self.menubar.addAction(self.menuAction.menuAction())
-        self.menuAction.addAction(self.actionData_Admin)
 
         self.retranslateUi(MainWindow)
 
@@ -116,7 +107,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.actionData_Admin.setText(QCoreApplication.translate("MainWindow", u"Data Admin", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Information Data", None))
         self.btn_add.setText(QCoreApplication.translate("MainWindow", u"Add or Edit\n"
 "Data", None))
@@ -125,15 +115,14 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Username", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Password", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Nama", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Nama", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Gaji", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Gaji", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Alamat", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Alamat", None));
-        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Status", None));
-        self.menuAction.setTitle(QCoreApplication.translate("MainWindow", u"Action", None))
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Status", None));
+        ___qtablewidgetitem5 = self.tableWidget.verticalHeaderItem(0)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Data", None));
     # retranslateUi
 

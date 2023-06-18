@@ -57,7 +57,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayoutWidget = QWidget(self.centralwidget)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(39, 110, 411, 321))
+        self.verticalLayoutWidget.setGeometry(QRect(39, 70, 411, 361))
         self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -94,6 +94,17 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.edit_nama)
 
+        self.label_7 = QLabel(self.verticalLayoutWidget)
+        self.label_7.setObjectName(u"label_7")
+
+        self.verticalLayout.addWidget(self.label_7)
+
+        self.edit_alamat = QLineEdit(self.verticalLayoutWidget)
+        self.edit_alamat.setObjectName(u"edit_alamat")
+        self.edit_alamat.setMaximumSize(QSize(16777215, 30))
+
+        self.verticalLayout.addWidget(self.edit_alamat)
+
         self.label_6 = QLabel(self.verticalLayoutWidget)
         self.label_6.setObjectName(u"label_6")
 
@@ -122,7 +133,7 @@ class Ui_MainWindow(object):
 
         self.label_5 = QLabel(self.centralwidget)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(240, 20, 261, 41))
+        self.label_5.setGeometry(QRect(240, 0, 261, 41))
         font1 = QFont()
         font1.setPointSize(18)
         self.label_5.setFont(font1)
@@ -148,6 +159,7 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Username", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Password", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Nama Karyawan", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Alamat", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Gaji Karyawan", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Status Karyawan", None))
         self.radio_aktif.setText(QCoreApplication.translate("MainWindow", u"Aktif", None))

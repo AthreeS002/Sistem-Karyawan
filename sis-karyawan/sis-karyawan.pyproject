@@ -1,3 +1,3 @@
 {
-    "files": ["widget.py","images.qrc","karyawan.ui","admin.ui","form.ui","dashboard_admin.ui","add_karyawan.ui"]
+    "files": ["images.qrc","add_karyawan.ui","karyawan.ui","admin.ui","form.ui","dashboard_admin.ui","widget.py","dashboard_karyawan.ui"]
 }
