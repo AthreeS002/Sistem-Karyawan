@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>D:/Photos/Wallpaper/Another/wallpaperflare.com_wallpaper (4).jpg</file>
+    </qresource>
+</RCC>
