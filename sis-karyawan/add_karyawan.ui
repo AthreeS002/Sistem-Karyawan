@@ -207,9 +207,9 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>0</y>
-      <width>261</width>
+      <x>190</x>
+      <y>10</y>
+      <width>311</width>
       <height>41</height>
      </rect>
     </property>
@@ -219,7 +219,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Halaman Data Karyawan</string>
+     <string>Halaman Add Data Karyawan</string>
     </property>
    </widget>
   </widget>
