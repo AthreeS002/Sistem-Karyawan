@@ -17,9 +17,9 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>20</y>
-      <width>201</width>
+      <x>260</x>
+      <y>30</y>
+      <width>351</width>
       <height>41</height>
      </rect>
     </property>
@@ -29,25 +29,25 @@
      </font>
     </property>
     <property name="text">
-     <string>Information Data</string>
+     <string>WELCOME TO DASHBOARD !!</string>
     </property>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget_2">
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>160</y>
-      <width>181</width>
-      <height>171</height>
+      <x>250</x>
+      <y>230</y>
+      <width>371</width>
+      <height>161</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="btn_add">
+      <widget class="QPushButton" name="btn_admin">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>50</height>
+         <height>60</height>
         </size>
        </property>
        <property name="font">
@@ -56,17 +56,16 @@
         </font>
        </property>
        <property name="text">
-        <string>Add or Edit
-Data</string>
+        <string>Data Admin</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_show">
+      <widget class="QPushButton" name="btn_karyawan">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>50</height>
+         <height>60</height>
         </size>
        </property>
        <property name="font">
@@ -75,25 +74,7 @@ Data</string>
         </font>
        </property>
        <property name="text">
-        <string>Show Data</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btn_exit">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>50</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Exit</string>
+        <string>Data Karyawan</string>
        </property>
       </widget>
      </item>
@@ -102,64 +83,19 @@ Data</string>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>110</y>
-      <width>541</width>
-      <height>281</height>
+      <x>260</x>
+      <y>130</y>
+      <width>354</width>
+      <height>80</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QTableWidget" name="tableWidget">
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Anda dapat melihat dan mengubah data yang ada pada database.
+Namun silakan pilih dan klik diantara kedua button dibawah</string>
        </property>
-       <property name="rowCount">
-        <number>10</number>
-       </property>
-       <property name="columnCount">
-        <number>6</number>
-       </property>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <column>
-        <property name="text">
-         <string>Username</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Password</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Nama</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Gaji</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Alamat</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Status</string>
-        </property>
-       </column>
       </widget>
      </item>
     </layout>
@@ -178,14 +114,14 @@ Data</string>
     <property name="title">
      <string>Action</string>
     </property>
-    <addaction name="actionData_Admin"/>
+    <addaction name="actionLogout"/>
    </widget>
    <addaction name="menuAction"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionData_Admin">
+  <action name="actionLogout">
    <property name="text">
-    <string>Data Admin</string>
+    <string>Logout</string>
    </property>
   </action>
  </widget>

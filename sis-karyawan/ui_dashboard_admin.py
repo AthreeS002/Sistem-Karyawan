@@ -16,84 +16,57 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QHeaderView, QLabel, QMainWindow,
+from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QMainWindow,
     QMenu, QMenuBar, QPushButton, QSizePolicy,
-    QStatusBar, QTableWidget, QTableWidgetItem, QVBoxLayout,
-    QWidget)
+    QStatusBar, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(869, 452)
-        self.actionData_Admin = QAction(MainWindow)
-        self.actionData_Admin.setObjectName(u"actionData_Admin")
+        self.actionLogout = QAction(MainWindow)
+        self.actionLogout.setObjectName(u"actionLogout")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(340, 20, 201, 41))
+        self.label.setGeometry(QRect(260, 30, 351, 41))
         font = QFont()
         font.setPointSize(20)
         self.label.setFont(font)
-        self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
-        self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
-        self.verticalLayoutWidget_2.setGeometry(QRect(640, 160, 181, 171))
-        self.verticalLayout_2 = QVBoxLayout(self.verticalLayoutWidget_2)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.btn_add = QPushButton(self.verticalLayoutWidget_2)
-        self.btn_add.setObjectName(u"btn_add")
-        self.btn_add.setMaximumSize(QSize(16777215, 50))
+        self.horizontalLayoutWidget = QWidget(self.centralwidget)
+        self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
+        self.horizontalLayoutWidget.setGeometry(QRect(250, 230, 371, 161))
+        self.horizontalLayout = QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.btn_admin = QPushButton(self.horizontalLayoutWidget)
+        self.btn_admin.setObjectName(u"btn_admin")
+        self.btn_admin.setMaximumSize(QSize(16777215, 60))
         font1 = QFont()
         font1.setPointSize(12)
-        self.btn_add.setFont(font1)
+        self.btn_admin.setFont(font1)
 
-        self.verticalLayout_2.addWidget(self.btn_add)
+        self.horizontalLayout.addWidget(self.btn_admin)
 
-        self.btn_show = QPushButton(self.verticalLayoutWidget_2)
-        self.btn_show.setObjectName(u"btn_show")
-        self.btn_show.setMaximumSize(QSize(16777215, 50))
-        self.btn_show.setFont(font1)
+        self.btn_karyawan = QPushButton(self.horizontalLayoutWidget)
+        self.btn_karyawan.setObjectName(u"btn_karyawan")
+        self.btn_karyawan.setMaximumSize(QSize(16777215, 60))
+        self.btn_karyawan.setFont(font1)
 
-        self.verticalLayout_2.addWidget(self.btn_show)
-
-        self.btn_exit = QPushButton(self.verticalLayoutWidget_2)
-        self.btn_exit.setObjectName(u"btn_exit")
-        self.btn_exit.setMaximumSize(QSize(16777215, 50))
-        self.btn_exit.setFont(font1)
-
-        self.verticalLayout_2.addWidget(self.btn_exit)
+        self.horizontalLayout.addWidget(self.btn_karyawan)
 
         self.verticalLayoutWidget = QWidget(self.centralwidget)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(40, 110, 541, 281))
+        self.verticalLayoutWidget.setGeometry(QRect(260, 130, 354, 80))
         self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.tableWidget = QTableWidget(self.verticalLayoutWidget)
-        if (self.tableWidget.columnCount() < 6):
-            self.tableWidget.setColumnCount(6)
-        __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
-        __qtablewidgetitem1 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
-        __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
-        __qtablewidgetitem3 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
-        __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
-        __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
-        if (self.tableWidget.rowCount() < 10):
-            self.tableWidget.setRowCount(10)
-        self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setLayoutDirection(Qt.LeftToRight)
-        self.tableWidget.setRowCount(10)
-        self.tableWidget.setColumnCount(6)
+        self.label_2 = QLabel(self.verticalLayoutWidget)
+        self.label_2.setObjectName(u"label_2")
 
-        self.verticalLayout.addWidget(self.tableWidget)
+        self.verticalLayout.addWidget(self.label_2)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
@@ -107,7 +80,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.menubar.addAction(self.menuAction.menuAction())
-        self.menuAction.addAction(self.actionData_Admin)
+        self.menuAction.addAction(self.actionLogout)
 
         self.retranslateUi(MainWindow)
 
@@ -116,24 +89,12 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.actionData_Admin.setText(QCoreApplication.translate("MainWindow", u"Data Admin", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Information Data", None))
-        self.btn_add.setText(QCoreApplication.translate("MainWindow", u"Add or Edit\n"
-"Data", None))
-        self.btn_show.setText(QCoreApplication.translate("MainWindow", u"Show Data", None))
-        self.btn_exit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
-        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Username", None));
-        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Password", None));
-        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Nama", None));
-        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Gaji", None));
-        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Alamat", None));
-        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Status", None));
+        self.actionLogout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"WELCOME TO DASHBOARD !!", None))
+        self.btn_admin.setText(QCoreApplication.translate("MainWindow", u"Data Admin", None))
+        self.btn_karyawan.setText(QCoreApplication.translate("MainWindow", u"Data Karyawan", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Anda dapat melihat dan mengubah data yang ada pada database.\n"
+"Namun silakan pilih dan klik diantara kedua button dibawah", None))
         self.menuAction.setTitle(QCoreApplication.translate("MainWindow", u"Action", None))
     # retranslateUi
 

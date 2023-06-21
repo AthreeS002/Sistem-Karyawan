@@ -71,7 +71,7 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.verticalLayoutWidget_3 = QWidget(self.centralwidget)
         self.verticalLayoutWidget_3.setObjectName(u"verticalLayoutWidget_3")
-        self.verticalLayoutWidget_3.setGeometry(QRect(490, 120, 160, 141))
+        self.verticalLayoutWidget_3.setGeometry(QRect(490, 120, 160, 151))
         self.verticalLayout_3 = QVBoxLayout(self.verticalLayoutWidget_3)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -83,6 +83,13 @@ class Ui_MainWindow(object):
         self.btn_login.setFont(font1)
 
         self.verticalLayout_3.addWidget(self.btn_login)
+
+        self.btn_cancel = QPushButton(self.verticalLayoutWidget_3)
+        self.btn_cancel.setObjectName(u"btn_cancel")
+        self.btn_cancel.setMaximumSize(QSize(16777215, 50))
+        self.btn_cancel.setFont(font1)
+
+        self.verticalLayout_3.addWidget(self.btn_cancel)
 
         self.btn_exit = QPushButton(self.verticalLayoutWidget_3)
         self.btn_exit.setObjectName(u"btn_exit")
@@ -111,6 +118,7 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Password", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Login as Administrator", None))
         self.btn_login.setText(QCoreApplication.translate("MainWindow", u"Login", None))
+        self.btn_cancel.setText(QCoreApplication.translate("MainWindow", u"Cancel", None))
         self.btn_exit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
     # retranslateUi
 
