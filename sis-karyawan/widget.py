@@ -431,7 +431,7 @@ class Ui_add_karyawan(QtWidgets.QMainWindow):
                 database="karyawan"
                 )
             mycursor = mydb.cursor()
-            sql = "INSERT INTO data (username, password, nama, gaji, alamat, status) VALUES (%s, %s, %s, %s, %s, %s)"
+            sql = "INSERT INTO data (id, username, password, nama, gaji, alamat, status) VALUES (NULL, %s, %s, %s, %s, %s, %s)"
             val = (username, password, nama, gaji, alamat, status)
 
             mycursor.execute(sql, val)

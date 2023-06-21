@@ -130,7 +130,7 @@ Data</string>
         <number>10</number>
        </property>
        <property name="columnCount">
-        <number>6</number>
+        <number>7</number>
        </property>
        <row/>
        <row/>
@@ -142,6 +142,11 @@ Data</string>
        <row/>
        <row/>
        <row/>
+       <column>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </column>
        <column>
         <property name="text">
          <string>Username</string>
