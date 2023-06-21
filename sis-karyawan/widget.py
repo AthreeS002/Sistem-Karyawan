@@ -23,6 +23,7 @@ class Widget(QWidget):
         self.ui.setupUi(self)
         self.ui.btn_login.clicked.connect(self.login_karyawan)
         self.ui.btn_login_admin.clicked.connect(self.admin_page)
+        self.ui.btn_exit.clicked.connect(self.close)
 
     #login sebagai karyawan
     def login_karyawan(self):
@@ -259,8 +260,12 @@ class Ui_data_admin(QtWidgets.QMainWindow):
         loader = QUiLoader()
         self.ui = loader.load("data_admin.ui")
         self.setCentralWidget(self.ui)
+
         self.ui.btn_add.clicked.connect(self.add_admin)
         self.ui.btn_show.clicked.connect(self.table_view)
+
+        self.ui.actionLogout.triggered.connect(self.logout)
+        self.ui.btn_exit.clicked.connect(self.close)
 
     def add_admin(self):
         self.create_new_user_window = Ui_add_admin()
@@ -289,6 +294,11 @@ class Ui_data_admin(QtWidgets.QMainWindow):
 
         except mc.Error as e:
             print("Error")
+
+    def logout(self):
+        self.create_new_user_window = Widget()
+        self.close()
+        self.create_new_user_window.show()
 
 class Ui_data_karyawan(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -334,9 +344,12 @@ class Ui_add_admin(QtWidgets.QMainWindow):
         self.ui = loader.load("add_admin.ui")
         self.setCentralWidget(self.ui)
 
-        self.ui.btn_add.clicked.connect(self.add_karyawan)
+        self.ui.btn_edit.clicked.connect(self.edit_admin)
+        self.ui.btn_cancel.clicked.connect(self.cancel)
+        self.ui.actionLogout.triggered.connect(self.logout)
+        self.ui.btn_add.clicked.connect(self.add_admin)
 
-    def add_karyawan(self):
+    def add_admin(self):
         username = self.ui.edit_username.text()
         nama = self.ui.edit_nama.text()
         password = self.ui.edit_password.text()
@@ -366,6 +379,21 @@ class Ui_add_admin(QtWidgets.QMainWindow):
         except mc.Error as err:
             print("mysql exception: {}".format(err))
 
+    def edit_admin(self):
+        self.create_new_user_window = Ui_edit_admin1()
+        self.create_new_user_window.show()
+        self.close()
+
+    def cancel(self):
+        self.create_new_user_window = Ui_data_admin()
+        self.create_new_user_window.show()
+        self.close()
+
+    def logout(self):
+        self.create_new_user_window = Widget()
+        self.close()
+        self.create_new_user_window.show()
+
 
 class Ui_add_karyawan(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
@@ -379,6 +407,9 @@ class Ui_add_karyawan(QtWidgets.QMainWindow):
 
             self.ui.btn_add.clicked.connect(self.add_karyawan)
             self.ui.btn_update.clicked.connect(self.edit_karyawan)
+
+            self.ui.actionLogout.triggered.connect(self.logout)
+            self.ui.btn_exit.clicked.connect(self.close)
 
     def add_karyawan(self):
         username = self.ui.edit_username.text()
@@ -453,6 +484,109 @@ class Ui_add_karyawan(QtWidgets.QMainWindow):
 
         except mc.Error as err:
             print("mysql exception: {}".format(err))
+
+    def logout(self):
+        self.create_new_user_window = Widget()
+        self.close()
+        self.create_new_user_window.show()
+
+class Ui_edit_admin1(QtWidgets.QMainWindow):
+    def __init__(self, parent=None):
+        super(self.__class__, self).__init__(parent)
+        loader = QUiLoader()
+        self.ui = loader.load("editpage_admin1.ui")
+        self.setCentralWidget(self.ui)
+
+        self.ui.btn_edit.clicked.connect(self.id)
+        self.ui.btn_cancel.clicked.connect(self.cancel)
+
+    def id(self):
+        id = self.ui.edit_id.text()
+
+        db = mc.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="karyawan"
+            )
+        cursor = db.cursor()
+
+        query = "SELECT * FROM admin WHERE id = %s"
+        val = (id,)
+        cursor.execute(query, val)
+        result = cursor.fetchone()
+
+        if result is not None:
+            self.close()
+            self.next(id)
+
+        else:
+            QMessageBox.warning(self, "Error!", "Not found the ID")
+
+    def next(self, id):
+        self.create_new_user_window = Ui_edit_admin2(self)
+        self.create_new_user_window.id = id
+        self.create_new_user_window.show()
+        self.close()
+
+    def cancel(self):
+        self.create_new_user_window = Ui_add_admin()
+        self.close()
+        self.create_new_user_window.show()
+
+
+class Ui_edit_admin2(QtWidgets.QMainWindow):
+    def __init__(self, parent=None):
+        super(self.__class__, self).__init__(parent)
+        loader = QUiLoader()
+        self.ui = loader.load("editpage_admin2.ui")
+        self.setCentralWidget(self.ui)
+
+        self.ui.btn_update.clicked.connect(self.update_data)
+        self.ui.actionLogout.triggered.connect(self.logout)
+        self.ui.btn_cancel.clicked.connect(self.cancel)
+        self.ui.btn_exit.clicked.connect(self.close)
+
+    def update_data(self, username):
+        id = self.id
+        username = self.ui.edit_username.text()
+        nama = self.ui.edit_nama.text()
+        password = self.ui.edit_password.text()
+
+        try:
+            mydb = mc.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="karyawan"
+            )
+            mycursor = mydb.cursor()
+            sql = """UPDATE admin SET username = %s, nama = %s, password = %s WHERE id= %s"""
+            val = (username, nama, password, id)
+
+            mycursor.execute(sql, val)
+
+            mydb.commit()
+            dlg = QMessageBox(self)
+            dlg.setWindowTitle("Sukses")
+            dlg.setText("Update Data sukses")
+            button = dlg.exec()
+
+            if button == QMessageBox.StandardButton.Ok:
+                print("OK!")
+
+        except mc.Error as err:
+                print("mysql exception: {}".format(err))
+
+    def cancel(self):
+        self.create_new_user_window = Ui_data_admin()
+        self.create_new_user_window.show()
+        self.close()
+
+    def logout(self):
+        self.create_new_user_window = Widget()
+        self.close()
+        self.create_new_user_window.show()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

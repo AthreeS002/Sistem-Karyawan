@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'edit_karyawan.ui'
+## Form generated from reading UI file 'editpage_admin2.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.0
 ##
@@ -24,28 +24,63 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 500)
-        MainWindow.setMinimumSize(QSize(800, 500))
+        MainWindow.resize(660, 398)
+        MainWindow.setMinimumSize(QSize(660, 398))
         self.actionLogout = QAction(MainWindow)
         self.actionLogout.setObjectName(u"actionLogout")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
+        self.label_5 = QLabel(self.centralwidget)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(210, 30, 221, 41))
+        font = QFont()
+        font.setPointSize(18)
+        self.label_5.setFont(font)
+        self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
+        self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
+        self.verticalLayoutWidget_2.setGeometry(QRect(480, 130, 160, 171))
+        self.verticalLayout_2 = QVBoxLayout(self.verticalLayoutWidget_2)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.btn_update = QPushButton(self.verticalLayoutWidget_2)
+        self.btn_update.setObjectName(u"btn_update")
+        self.btn_update.setMaximumSize(QSize(16777215, 50))
+        font1 = QFont()
+        font1.setPointSize(12)
+        self.btn_update.setFont(font1)
+
+        self.verticalLayout_2.addWidget(self.btn_update)
+
+        self.btn_cancel = QPushButton(self.verticalLayoutWidget_2)
+        self.btn_cancel.setObjectName(u"btn_cancel")
+        self.btn_cancel.setMaximumSize(QSize(16777215, 50))
+        self.btn_cancel.setFont(font1)
+
+        self.verticalLayout_2.addWidget(self.btn_cancel)
+
+        self.btn_exit = QPushButton(self.verticalLayoutWidget_2)
+        self.btn_exit.setObjectName(u"btn_exit")
+        self.btn_exit.setMaximumSize(QSize(16777215, 50))
+        self.btn_exit.setFont(font1)
+
+        self.verticalLayout_2.addWidget(self.btn_exit)
+
         self.verticalLayoutWidget = QWidget(self.centralwidget)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(70, 150, 411, 191))
+        self.verticalLayoutWidget.setGeometry(QRect(20, 110, 411, 191))
         self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.label = QLabel(self.verticalLayoutWidget)
-        self.label.setObjectName(u"label")
+        self.label_4 = QLabel(self.verticalLayoutWidget)
+        self.label_4.setObjectName(u"label_4")
 
-        self.verticalLayout.addWidget(self.label)
+        self.verticalLayout.addWidget(self.label_4)
 
-        self.edit_password = QLineEdit(self.verticalLayoutWidget)
-        self.edit_password.setObjectName(u"edit_password")
-        self.edit_password.setMaximumSize(QSize(16777215, 30))
+        self.edit_username = QLineEdit(self.verticalLayoutWidget)
+        self.edit_username.setObjectName(u"edit_username")
+        self.edit_username.setMaximumSize(QSize(16777215, 30))
 
-        self.verticalLayout.addWidget(self.edit_password)
+        self.verticalLayout.addWidget(self.edit_username)
 
         self.label_2 = QLabel(self.verticalLayoutWidget)
         self.label_2.setObjectName(u"label_2")
@@ -58,56 +93,21 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.edit_nama)
 
-        self.label_7 = QLabel(self.verticalLayoutWidget)
-        self.label_7.setObjectName(u"label_7")
+        self.label = QLabel(self.verticalLayoutWidget)
+        self.label.setObjectName(u"label")
 
-        self.verticalLayout.addWidget(self.label_7)
+        self.verticalLayout.addWidget(self.label)
 
-        self.edit_alamat = QLineEdit(self.verticalLayoutWidget)
-        self.edit_alamat.setObjectName(u"edit_alamat")
-        self.edit_alamat.setMaximumSize(QSize(16777215, 30))
+        self.edit_password = QLineEdit(self.verticalLayoutWidget)
+        self.edit_password.setObjectName(u"edit_password")
+        self.edit_password.setMaximumSize(QSize(16777215, 30))
 
-        self.verticalLayout.addWidget(self.edit_alamat)
+        self.verticalLayout.addWidget(self.edit_password)
 
-        self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
-        self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
-        self.verticalLayoutWidget_2.setGeometry(QRect(530, 180, 160, 171))
-        self.verticalLayout_2 = QVBoxLayout(self.verticalLayoutWidget_2)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.btn_update = QPushButton(self.verticalLayoutWidget_2)
-        self.btn_update.setObjectName(u"btn_update")
-        self.btn_update.setMaximumSize(QSize(16777215, 50))
-        font = QFont()
-        font.setPointSize(12)
-        self.btn_update.setFont(font)
-
-        self.verticalLayout_2.addWidget(self.btn_update)
-
-        self.btn_cancel = QPushButton(self.verticalLayoutWidget_2)
-        self.btn_cancel.setObjectName(u"btn_cancel")
-        self.btn_cancel.setMaximumSize(QSize(16777215, 50))
-        self.btn_cancel.setFont(font)
-
-        self.verticalLayout_2.addWidget(self.btn_cancel)
-
-        self.btn_exit = QPushButton(self.verticalLayoutWidget_2)
-        self.btn_exit.setObjectName(u"btn_exit")
-        self.btn_exit.setMaximumSize(QSize(16777215, 50))
-        self.btn_exit.setFont(font)
-
-        self.verticalLayout_2.addWidget(self.btn_exit)
-
-        self.label_3 = QLabel(self.centralwidget)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(310, 50, 201, 31))
-        font1 = QFont()
-        font1.setPointSize(20)
-        self.label_3.setFont(font1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 800, 21))
+        self.menubar.setGeometry(QRect(0, 0, 660, 21))
         self.menuAction = QMenu(self.menubar)
         self.menuAction.setObjectName(u"menuAction")
         MainWindow.setMenuBar(self.menubar)
@@ -126,13 +126,13 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.actionLogout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Password", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Nama Karyawan", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Alamat", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Halaman Edit Admin", None))
         self.btn_update.setText(QCoreApplication.translate("MainWindow", u"Edit Data", None))
         self.btn_cancel.setText(QCoreApplication.translate("MainWindow", u"Cancel", None))
         self.btn_exit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Ubah Data Anda", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Username", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Nama Admin", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Password", None))
         self.menuAction.setTitle(QCoreApplication.translate("MainWindow", u"Action", None))
     # retranslateUi
 

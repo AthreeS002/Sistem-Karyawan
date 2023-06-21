@@ -25,6 +25,7 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(691, 492)
+        MainWindow.setMinimumSize(QSize(691, 492))
         self.actionLogout = QAction(MainWindow)
         self.actionLogout.setObjectName(u"actionLogout")
         self.centralwidget = QWidget(MainWindow)

@@ -7,8 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>827</width>
-    <height>600</height>
+    <height>445</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>827</width>
+    <height>445</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -18,7 +24,7 @@
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>170</y>
+      <y>150</y>
       <width>181</width>
       <height>171</height>
      </rect>
@@ -85,7 +91,7 @@ Data</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>20</y>
+      <y>0</y>
       <width>331</width>
       <height>81</height>
      </rect>
@@ -109,7 +115,7 @@ Data</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>120</y>
+      <y>100</y>
       <width>541</width>
       <height>281</height>
      </rect>

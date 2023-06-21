@@ -25,7 +25,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(827, 600)
+        MainWindow.resize(827, 445)
+        MainWindow.setMinimumSize(QSize(827, 445))
         self.actionImport = QAction(MainWindow)
         self.actionImport.setObjectName(u"actionImport")
         self.actionLogout = QAction(MainWindow)
@@ -38,7 +39,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
         self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
-        self.verticalLayoutWidget_2.setGeometry(QRect(630, 170, 181, 171))
+        self.verticalLayoutWidget_2.setGeometry(QRect(630, 150, 181, 171))
         self.verticalLayout_2 = QVBoxLayout(self.verticalLayoutWidget_2)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -67,7 +68,7 @@ class Ui_MainWindow(object):
 
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(250, 20, 331, 81))
+        self.label.setGeometry(QRect(250, 0, 331, 81))
         font1 = QFont()
         font1.setPointSize(20)
         self.label.setFont(font1)
@@ -75,7 +76,7 @@ class Ui_MainWindow(object):
         self.label.setWordWrap(False)
         self.verticalLayoutWidget = QWidget(self.centralwidget)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(30, 120, 541, 281))
+        self.verticalLayoutWidget.setGeometry(QRect(30, 100, 541, 281))
         self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
