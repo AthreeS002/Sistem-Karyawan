@@ -14,36 +14,81 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>60</y>
-      <width>201</width>
-      <height>41</height>
+      <x>70</x>
+      <y>150</y>
+      <width>411</width>
+      <height>191</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Information Data</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edit_password">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Nama Karyawan</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edit_nama">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Alamat</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edit_alamat">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>290</y>
-      <width>731</width>
+      <x>530</x>
+      <y>180</y>
+      <width>160</width>
       <height>171</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QPushButton" name="btn_edit">
+      <widget class="QPushButton" name="btn_update">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
@@ -61,7 +106,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_show">
+      <widget class="QPushButton" name="btn_cancel">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
@@ -74,7 +119,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Show Data</string>
+        <string>Cancel</string>
        </property>
       </widget>
      </item>
@@ -98,60 +143,23 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>170</y>
-      <width>731</width>
-      <height>61</height>
+      <x>310</x>
+      <y>50</y>
+      <width>201</width>
+      <height>31</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QTableWidget" name="tableWidget">
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="rowCount">
-        <number>1</number>
-       </property>
-       <property name="columnCount">
-        <number>5</number>
-       </property>
-       <row>
-        <property name="text">
-         <string>Data</string>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string>Username</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Nama</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Gaji</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Alamat</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Status</string>
-        </property>
-       </column>
-      </widget>
-     </item>
-    </layout>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ubah Data Anda</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -163,20 +171,8 @@
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuAction">
-    <property name="title">
-     <string>Action</string>
-    </property>
-    <addaction name="actionLogout"/>
-   </widget>
-   <addaction name="menuAction"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionLogout">
-   <property name="text">
-    <string>Logout</string>
-   </property>
-  </action>
  </widget>
  <resources/>
  <connections/>

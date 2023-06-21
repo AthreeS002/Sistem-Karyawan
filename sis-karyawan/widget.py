@@ -72,6 +72,7 @@ class Ui_dashboard_karyawan(QtWidgets.QMainWindow):
 #        self.username = username
 
         self.ui.btn_show.clicked.connect(self.show_data)
+        self.ui.btn_edit.clicked.connect(self.edit_page)
 
     def show_data(self):
         try:
@@ -103,6 +104,60 @@ class Ui_dashboard_karyawan(QtWidgets.QMainWindow):
         except mc.Error as e:
             print("Error")
 
+    def edit_page(self, username):
+        self.create_new_user_window = Ui_edit_karyawan(self)
+        self.create_new_user_window.username = username
+        self.create_new_user_window.show()
+        self.close()
+
+#class edit karyawan
+class Ui_edit_karyawan(QtWidgets.QMainWindow):
+    def __init__(self, parent=None):
+        super(self.__class__, self).__init__(parent)
+        loader = QUiLoader()
+        self.ui = loader.load("edit_karyawan.ui")
+        self.setCentralWidget(self.ui)
+        #        self.username = username
+        self.ui.btn_update.clicked.connect(self.update_data)
+        self.ui.btn_cancel.clicked.connect(self.cancel)
+        self.ui.btn_exit.clicked.connect(self.close)
+
+    def update_data(self):
+        password = self.ui.edit_password.text()
+        nama = self.ui.edit_nama.text()
+        alamat= self.ui.edit_alamat.text()
+
+        try:
+            mydb = mc.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="karyawan"
+            )
+            mycursor = mydb.cursor()
+            sql = """UPDATE data SET password = %s, nama = %s, alamat = %s WHERE username = %s"""
+            val = (password, nama, alamat, self.username,)
+
+            mycursor.execute(sql, val)
+
+            mydb.commit()
+            dlg = QMessageBox(self)
+            dlg.setWindowTitle("Sukses")
+            dlg.setText("Update Data sukses")
+            button = dlg.exec()
+
+            if button == QMessageBox.StandardButton.Ok:
+                print("OK!")
+
+        except mc.Error as err:
+            print("mysql exception: {}".format(err))
+
+
+
+    def cancel(self):
+        self.create_new_user_window = Ui_dashboard_karyawan()
+        self.close()
+        self.create_new_user_window.show()
 
 #class tampilan login admin
 class Ui_admin(QtWidgets.QMainWindow):
