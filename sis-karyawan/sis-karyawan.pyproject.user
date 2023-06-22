@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 10.0.1, 2023-06-22T00:41:59. -->
+<!-- Written by QtCreator 10.0.1, 2023-06-22T11:03:02. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -99,7 +99,7 @@
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Python.PysideBuildStep</value>
-      <value type="QString" key="Python.PySideProjectTool">C:\Users\User\Documents\Koding\Pemrograman Desktop\venv\Scripts\pyside6-project.exe</value>
+      <value type="QString" key="Python.PySideProjectTool">C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts\pyside6-project.exe</value>
      </valuemap>
      <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Build</value>
@@ -144,6 +144,7 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">widget.py</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/User/Documents/Koding/Pemrograman Desktop/github/Sistem-Karyawan/sis-karyawan/widget.py</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/User/Documents/Koding/Pemrograman Desktop/github/Sistem-Karyawan/sis-karyawan/widget.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{5b682dd6-6430-4795-89d0-0d074b882414}</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\User\Documents\Koding\Pemrograman Desktop\github\Sistem-Karyawan\sis-karyawan\widget.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>

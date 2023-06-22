@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'add_karyawan.ui'
+## Form generated from reading UI file 'editpage_karyawan2.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.0
 ##
@@ -24,41 +24,12 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(691, 492)
-        MainWindow.setMinimumSize(QSize(691, 492))
+        MainWindow.resize(691, 488)
+        MainWindow.setMinimumSize(QSize(691, 488))
         self.actionLogout = QAction(MainWindow)
         self.actionLogout.setObjectName(u"actionLogout")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
-        self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
-        self.verticalLayoutWidget_2.setGeometry(QRect(500, 180, 160, 171))
-        self.verticalLayout_2 = QVBoxLayout(self.verticalLayoutWidget_2)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.btn_add = QPushButton(self.verticalLayoutWidget_2)
-        self.btn_add.setObjectName(u"btn_add")
-        self.btn_add.setMaximumSize(QSize(16777215, 50))
-        font = QFont()
-        font.setPointSize(12)
-        self.btn_add.setFont(font)
-
-        self.verticalLayout_2.addWidget(self.btn_add)
-
-        self.btn_update = QPushButton(self.verticalLayoutWidget_2)
-        self.btn_update.setObjectName(u"btn_update")
-        self.btn_update.setMaximumSize(QSize(16777215, 50))
-        self.btn_update.setFont(font)
-
-        self.verticalLayout_2.addWidget(self.btn_update)
-
-        self.btn_exit = QPushButton(self.verticalLayoutWidget_2)
-        self.btn_exit.setObjectName(u"btn_exit")
-        self.btn_exit.setMaximumSize(QSize(16777215, 50))
-        self.btn_exit.setFont(font)
-
-        self.verticalLayout_2.addWidget(self.btn_exit)
-
         self.verticalLayoutWidget = QWidget(self.centralwidget)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
         self.verticalLayoutWidget.setGeometry(QRect(39, 70, 411, 361))
@@ -135,6 +106,35 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.radio_tidakAktif)
 
+        self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
+        self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
+        self.verticalLayoutWidget_2.setGeometry(QRect(500, 180, 160, 171))
+        self.verticalLayout_2 = QVBoxLayout(self.verticalLayoutWidget_2)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.btn_update = QPushButton(self.verticalLayoutWidget_2)
+        self.btn_update.setObjectName(u"btn_update")
+        self.btn_update.setMaximumSize(QSize(16777215, 50))
+        font = QFont()
+        font.setPointSize(12)
+        self.btn_update.setFont(font)
+
+        self.verticalLayout_2.addWidget(self.btn_update)
+
+        self.btn_cancel = QPushButton(self.verticalLayoutWidget_2)
+        self.btn_cancel.setObjectName(u"btn_cancel")
+        self.btn_cancel.setMaximumSize(QSize(16777215, 50))
+        self.btn_cancel.setFont(font)
+
+        self.verticalLayout_2.addWidget(self.btn_cancel)
+
+        self.btn_exit = QPushButton(self.verticalLayoutWidget_2)
+        self.btn_exit.setObjectName(u"btn_exit")
+        self.btn_exit.setMaximumSize(QSize(16777215, 50))
+        self.btn_exit.setFont(font)
+
+        self.verticalLayout_2.addWidget(self.btn_exit)
+
         self.label_5 = QLabel(self.centralwidget)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(190, 10, 311, 41))
@@ -163,9 +163,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.actionLogout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
-        self.btn_add.setText(QCoreApplication.translate("MainWindow", u"Add Data", None))
-        self.btn_update.setText(QCoreApplication.translate("MainWindow", u"Edit Data", None))
-        self.btn_exit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Username", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Password", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Nama Karyawan", None))
@@ -174,7 +171,10 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Status Karyawan", None))
         self.radio_aktif.setText(QCoreApplication.translate("MainWindow", u"Aktif", None))
         self.radio_tidakAktif.setText(QCoreApplication.translate("MainWindow", u"Tidak Aktif", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Halaman Add Data Karyawan", None))
+        self.btn_update.setText(QCoreApplication.translate("MainWindow", u"Edit Data", None))
+        self.btn_cancel.setText(QCoreApplication.translate("MainWindow", u"Cancel", None))
+        self.btn_exit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Halaman Edit Data Karyawan", None))
         self.menuAction.setTitle(QCoreApplication.translate("MainWindow", u"Action", None))
     # retranslateUi
 

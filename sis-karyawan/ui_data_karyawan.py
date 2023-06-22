@@ -35,11 +35,13 @@ class Ui_MainWindow(object):
         self.actionExport_to_Excel.setObjectName(u"actionExport_to_Excel")
         self.actionLogout_2 = QAction(MainWindow)
         self.actionLogout_2.setObjectName(u"actionLogout_2")
+        self.actionExport_to_PDF = QAction(MainWindow)
+        self.actionExport_to_PDF.setObjectName(u"actionExport_to_PDF")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
         self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
-        self.verticalLayoutWidget_2.setGeometry(QRect(630, 150, 181, 171))
+        self.verticalLayoutWidget_2.setGeometry(QRect(630, 150, 181, 231))
         self.verticalLayout_2 = QVBoxLayout(self.verticalLayoutWidget_2)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -58,6 +60,13 @@ class Ui_MainWindow(object):
         self.btn_show.setFont(font)
 
         self.verticalLayout_2.addWidget(self.btn_show)
+
+        self.btn_delete = QPushButton(self.verticalLayoutWidget_2)
+        self.btn_delete.setObjectName(u"btn_delete")
+        self.btn_delete.setMaximumSize(QSize(16777215, 50))
+        self.btn_delete.setFont(font)
+
+        self.verticalLayout_2.addWidget(self.btn_delete)
 
         self.btn_exit = QPushButton(self.verticalLayoutWidget_2)
         self.btn_exit.setObjectName(u"btn_exit")
@@ -127,6 +136,7 @@ class Ui_MainWindow(object):
         self.menuAction.addAction(self.menuExport.menuAction())
         self.menuAction.addSeparator()
         self.menuExport.addAction(self.actionExport_to_Excel)
+        self.menuExport.addAction(self.actionExport_to_PDF)
         self.menuAction_2.addAction(self.actionLogout_2)
 
         self.retranslateUi(MainWindow)
@@ -140,9 +150,11 @@ class Ui_MainWindow(object):
         self.actionLogout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
         self.actionExport_to_Excel.setText(QCoreApplication.translate("MainWindow", u"Export to Excel", None))
         self.actionLogout_2.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
+        self.actionExport_to_PDF.setText(QCoreApplication.translate("MainWindow", u"Export to PDF", None))
         self.btn_add.setText(QCoreApplication.translate("MainWindow", u"Add or Edit\n"
 "Data", None))
         self.btn_show.setText(QCoreApplication.translate("MainWindow", u"Show Data", None))
+        self.btn_delete.setText(QCoreApplication.translate("MainWindow", u"Delete Data", None))
         self.btn_exit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Information Data Karyawan", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)

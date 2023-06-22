@@ -26,7 +26,7 @@
       <x>630</x>
       <y>150</y>
       <width>181</width>
-      <height>171</height>
+      <height>231</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -64,6 +64,24 @@ Data</string>
        </property>
        <property name="text">
         <string>Show Data</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_delete">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Delete Data</string>
        </property>
       </widget>
      </item>
@@ -200,6 +218,7 @@ Data</string>
       <string>Export</string>
      </property>
      <addaction name="actionExport_to_Excel"/>
+     <addaction name="actionExport_to_PDF"/>
     </widget>
     <addaction name="actionImport"/>
     <addaction name="menuExport"/>
@@ -233,6 +252,11 @@ Data</string>
   <action name="actionLogout_2">
    <property name="text">
     <string>Logout</string>
+   </property>
+  </action>
+  <action name="actionExport_to_PDF">
+   <property name="text">
+    <string>Export to PDF</string>
    </property>
   </action>
  </widget>

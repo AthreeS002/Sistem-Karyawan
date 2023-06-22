@@ -1,3 +1,3 @@
 {
-    "files": ["edit_karyawan.ui","widget.py","data_admin.ui","images.qrc","admin.ui","editpage_admin2.ui","dashboard_karyawan.ui","data_karyawan.ui","dashboard_admin.ui","form.ui","editpage_admin1.ui","karyawan.ui","add_karyawan.ui","add_admin.ui","editpage_karyawan1.ui"]
+    "files": ["add_admin.ui","karyawan.ui","delete_karyawan.ui","editpage_admin2.ui","dashboard_admin.ui","add_karyawan.ui","edit_karyawan.ui","editpage_karyawan2.ui","form.ui","editpage_admin1.ui","data_admin.ui","images.qrc","dashboard_karyawan.ui","editpage_karyawan1.ui","data_karyawan.ui","widget.py","admin.ui","delete_admin.ui"]
 }
